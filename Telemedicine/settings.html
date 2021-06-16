@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Doctorpage</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+  <style>
+  .card-outline-secondary
+  {
+  width:350px;
+height:350px;
+top:50%;
+left:50%;
+position:center;
+transform:translate(150%,10%);
+
+  }
+  .navbar-inverse
+  {
+  background-color:skyblue;
+  
+  }
+  body {
+  font-family: "Lato", sans-serif;
+  background-image: url('bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+}
+
+.sidenav {
+  height:100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: skyblue;
+  overflow-x: hidden;
+  padding-top: 20px;
+  transform:translate(0%,8%);
+}
+
+.sidenav a {
+  padding: 10px 8px 10px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: orange;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+  
+
+
+  </style>
+  <script language="javascript">
+  function StringCompare()
+{
+	var string1 = document.getElementById("inputPasswordNew").value;
+	var string2 = document.getElementById("inputPasswordNewVerify").value;
+if(string1 == string2)
+	{
+		
+	}
+	else
+       {
+		alert("The confirm password and new password are not same.Please check your passwords");
+	}
+	return false;
+}
+</script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <ul class="nav navbar-nav">
+  <li><a style="color:white;" href="Appointments.php">Back</a></li>
+  <p style="color:white;" class="navbar-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Doctor page&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+  <li class="dropdown"><a style="color:white;" class="dropdown-toggle" data-toggle="dropdown" href="#">profile <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="doctoreditprofile.php">profile</a></li>
+          <li><a href="settings.html">settings</a></li>
+          <li><a href="logout.php">logout</a></li>
+        </ul>
+      </li>
+  </ul>
+</nav>
+ </div>
+                
+                    
+
+                    <!-- form card change password -->
+                    <div class="card card-outline-secondary">
+                        <div class="card-header">
+                            <h3 class="mb-0">Change Password</h3>
+                        </div>
+                        <div class="card-body">
+                            <form class="form" role="form" autocomplete="off">
+                                <div class="form-group">
+                                    <label for="inputPasswordOld">Current Password</label>
+                                    <input type="password" class="form-control" id="inputPasswordOld" required="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPasswordNew">New Password</label>
+                                    <input type="password" class="form-control" id="inputPasswordNew" required="">
+                                    <span class="form-text small text-muted">
+                                            The password must be 8-20 characters, and must <em>not</em> contain spaces.
+                                        </span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPasswordNewVerify">Verify</label>
+                                    <input type="password" class="form-control" id="inputPasswordNewVerify" required="" onchange="StringCompare();">
+                                    <span class="form-text small text-muted">
+                                            To confirm, type the new password again.
+                                        </span>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-success btn-lg float-right" style="background-color:skyblue">Save</button>
+                                </div>
+                            </form>
+                        </div>
+                 
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+.navbar-inverse
+  {
+  background-color:skyblue;
+  
+  }
+  body {
+  font-family: "Lato", sans-serif;
+  background-image: url('bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidenav {
+  height:100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: skyblue;
+  overflow-x: hidden;
+  padding-top: 20px;
+  transform:translate(0%,8%);
+}
+
+.sidenav a {
+  padding: 10px 8px 10px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: orange;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (max-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+.appoint{
+width:500px;
+height:850px;
+background:lightblue;
+padding:1%;
+transform:translate(100%,0%);
+border-radius: 7px;
+}
+.appoint input{
+margin-left:10%;
+padding:2%;
+border:none;
+outline:none;
+border-radius: 5px;
+}
+.appoint input[type="submit"]{
+width:50%;
+border-radius: 6px;
+font-weight:bold;
+border:none;
+outline:none;
+}
+
+.divScroll {
+overflow:scroll;
+height:650px;
+transform:translate(60px,50px);
+}
+</style>
+<nav class="navbar navbar-inverse">
+  <ul class="nav navbar-nav">
+  <li><a style="color:white;" href="patient.html">Back</a></li>
+  <p style="color:white;" class="navbar-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Book your appointment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+      <li><a href="patient_editprofile.html"><span class="glyphicon glyphicon-user"></span> Edit profile</a></li>
+      <li><a href="Home.html"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+    </ul>
+</nav>
+
+<form action="bookapp.php" method="post" >
+<div class="appoint">
+</br><label>date:  </label>
+<input type="date" id="da" name="date" placeholder="MM/DD/YY"></br>
+</br><input type="radio" name="spe" value="General physcian">General physcian
+</br><input type="radio" name="spe" value="Cardiologist">Cardiologist [HEART]
+</br><input type="radio" name="spe" value="Gynacologist">Gynacologist
+</br><input type="radio" name="spe" value="Dermatologist">Dermatologist [SKIN]
+</br><input type="radio" name="spe" value="Neurologist">Neurologist [NERVES]
+</br><input type="radio" name="spe" value="Diabeties">Diabeties
+</br><input type="radio" name="spe" value="Ophthalmologist">Ophthalmologist [EYE]
+</br><input type="radio" name="spe" value="Orthopaedist">Orthopaedist [BONES]
+</br><input type="radio" name="spe" value="Pulmonologist">Pulmonologist [LUNGS]
+</br><input type="radio" name="spe" value="ENT">ENT</br></br>
+</br><label>Any other problem / Describe your problem:</label>
+<center><textarea rows="3" cols="50"  input type="text" placeholder="enter problem here"/></textarea></center></br>
+</form>
+<center><a href="bookapp.php"><input type="submit"></center></a></br> 
+<a href="patient.html"><button type="button">Back</button></a>
+</div>
+</body>
+</html>

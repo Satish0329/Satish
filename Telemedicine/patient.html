@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>patient-page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" type="text/css"  href="patpage.css">
+  <style>
+  .navbar-inverse
+  {
+  background-color:skyblue;
+  
+  }
+  body {
+  font-family: "Lato", sans-serif;
+  background-image: url('bg2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+}
+
+.sidenav {
+  height:100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: skyblue;
+  overflow-x: hidden;
+  padding-top: 20px;
+  transform:translate(0%,8%);
+}
+
+.sidenav a {
+  padding: 10px 8px 10px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+}
+.example_e {
+border: none;
+background: #404040;
+color: #ffffff !important;
+font-weight: 100;
+padding: 20px;
+text-transform: uppercase;
+border-radius: 6px;
+display: inline-block;
+transition: all 0.3s ease 0s;
+}
+.example_e:hover {
+color:black;!important;
+font-weight: 700 !important;
+letter-spacing: 3px;
+background: #58FF33;
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+transition: all 0.3s ease 0s;
+}
+
+.sidenav a:hover {
+  color: orange;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.patpage{
+width:300px;
+height:300px;
+background:white;
+position:center;
+transform:translate(350px,100px);
+}
+.pat{
+width:300px;
+height:300px;
+background:pink;
+position:center;
+transform:translate(800px,-200px);
+}
+
+</style>
+</head>
+<body bgcolor="teal">
+<nav class="navbar navbar-inverse">
+  <ul class="nav navbar-nav">
+  
+  <p style="color:white;font-size:25px;font-family:cursive;" class="navbar-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patient Appointment portal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+      <li><a style="color:white;font-size:15px;font-family:cursive;" href="Appointmentstatus.php"><span class="glyphicon glyphicon-envelope"></span>Appointment status</a></li>
+	  <li><a style="color:white;font-size:15px;font-family:cursive;"href="patient_editprofile.html"><span class="glyphicon glyphicon-pencil"></span> Edit profile</a></li>
+      <li><a style="color:white;font-size:15px;font-family:cursive;" href="Home.html"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+    </ul>
+</nav>
+<div class="patpage">
+<center>
+<img style=" border-radius: 8px;"src="consult.jpg" width="300px" height="300px">
+<div class="button_cont" align="center"><a class="example_e" href="consult.html" target="_blank" rel="nofollow noopener">consult now</a></div>
+
+
+</center>
+</div>
+<div class="pat">
+<center>
+<img style=" border-radius: 8px;" src="bookappointment.jpg"width="300px" height="300px"> 
+<div class="button_cont" align="center"><a class="example_e" href="bookapp.html" target="_blank" rel="nofollow noopener">Book Appointment</a></div>
+</div>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,242 @@
+<html>
+<head>
+<title> mod-Patient registration </title><meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<style> 
+        body {
+  background:gray;
+   background-size: cover;
+   text-align :center;
+}
+          
+        .navbar-custom { 
+            background-color:skyblue;
+            			
+        } 
+		
+.logo-img{
+    float: left;
+    position: relative;
+    margin: 10px 15px 15px 10px;
+}
+ .navbar {
+  width: 100%;
+  background-color:skyblue;
+  overflow: hidden;
+  height:0%
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  width: 16.66%; /* Four links of equal widths */
+  text-align: center;
+}
+
+
+.navbar a:hover {
+  background-color: #00CCFF;
+}
+
+.navbar a.active {
+  background-color: SKYBLUE;
+}
+
+@media screen and (max-width: 100px) {
+  .navbar a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+.patientreg{
+  border-radius: 20px;
+  background-color:lightblue;
+ background-position:center;
+width:900px;
+height:550px;
+transform:translate(30%,0%);
+}
+
+.patientreg d{
+font-weight:bold;
+font-size:18px;
+font-color:white;
+padding:20;
+width:80%;
+margin-left:10px;
+border-spacing:100px;
+}
+
+.patientreg input[type="text"],input[type="password"],input[type="email"],input[type="number"]
+{
+margin-top:0%;
+border:none;
+outline:none;
+width:80%;
+padding:10;
+margin-left:-10px;
+border-radius: 10px;
+}
+.patientreg input[type="submit"]{
+width:50%;
+padding:4;
+}
+.patientreg input[type="back"]{
+width:50%;
+padding:4;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+button[type=submit]:hover {
+  background-color:lightred;
+}
+
+.gfg { 
+                border-collapse:separate; 
+                border-spacing:0 15px; 
+            } 
+  </style>
+</head>
+<body>
+<body style="height:50px">
+
+<nav class="navbar navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar">
+       <img class="logo-img" src="logo.jpg" width="50" height="50" ALT="align box" ALIGN=CENTER>
+   
+    
+  <a href="Home.html">Home</a> 
+  <a href="DoctorLogin.html">Doctor</a> 
+  <a class="active"href="PatientLogin.html">Patient</a> 
+  <a href="About.html">About</a>
+  <a href="Help.html">Help</a>
+</div>
+  </div>
+  </nav>
+<div class ="patientreg">
+<form method="post" action="pat_reg.php">
+<table class = "gfg">
+
+<tr>
+<p &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;style="color:white;font-size:20px"><td><d>Name:</d></td>
+<td><input type="text" id="name" name="uname" placeholder="Enter your name"/></td></p></br>
+</tr>
+
+
+<p id="n" style="color: red;font-size: small;display:none;">*Name cannot be empty!</p>
+
+<tr >
+<p style="color:white;font-size:20px"></br><td><d>E-Mail:</d></td>
+<td><input type="email" name="email" id="mail" placeholder="Enter your email"/></br></td></p>
+</tr>
+
+<p id="e" style="color: red;font-size: small;display:none;">*E-Mail cannot be empty!</p>
+
+<tr>
+<p style="color:white;font-size:20px;"><td><d>Phone-Number:</d></td><td><input type="number" name="phone" id="num" placeholder="Enter your mobile no"/></td></p>
+</tr>
+
+<p id="nu" style="color: red;font-size: small;display:none;">*Phone-Number cannot be empty!</p>
+
+<tr>
+<p style="color:white;font-size:20px"><td><d>Date of birth:</d></td><td><input style="color:gray;" type="date" name="date" id="date" placeholder="MM/DD/YY"/></td></p>
+</tr>
+
+<p id="do" style="color: red;font-size: small;display:none;">*DOB cannot be empty!</p>
+
+<tr>
+<p style="color:white;font-size:20px"><td><d>Gender:</d></td>
+<td><input type="radio" id="g" name="gender" value="male">
+  <label for="male">Male</label>
+  <input type="radio" id="g" name="gender" value="female">
+  <label for="female">Female</label>
+  <input type="radio" id="g" name="gender" value="other">
+  <label for="other">Other</label></td></p>
+</tr>
+
+<p id="ge" style="color: red;font-size: small;display:none;">*Gender cannot be empty!</p>
+
+<tr>
+<p style="color:white;font-size:20px"><td><d>Password:</d></td>
+<td><input type="password" id="pass" name="pass" minlength="8,12" title="Password must be atleast 8 characters including 1 uppercase letter, 1 lowercase letter and numeric characters"placeholder="set your password"/></td></p>
+</tr>
+
+<p id="pa" style="color: red;font-size: small;display:none;">*Password cannot be empty!</p>
+<tr>
+<p style="color:white;font-size:20px;"><td><d>Confirm-Password:</d></td><td><input type="password" id="pass" placeholder="conform your password"/></td></p>
+</tr>
+
+<tr>
+<p style="color:white;font-size:20px;"><td><input type="Submit" name="Submit"></td>
+<td><input type="reset" name="reset"></td></p>
+</tr>
+
+
+<p id="co" style="color: red;font-size: small;display:none;">*Confirm-Password cannot be empty!</p>
+</table>
+</form>
+
+</body>
+
+<script type="text/javascript">
+function validate(){
+var s = document.getElementById("na");
+var a = document.getElementById("name"); 
+var b = document.getElementById("mail");
+var c = document.getElementById("num");
+var d = document.getElementById("date");
+var e = document.getElementById("g");
+var f = document.getElementById("pass");
+var h = document.getElementById("pass");
+ var flag=1;
+if(a.value == " ")
+{
+document.getElementById("n").style.display="inline-block";
+flag=0;
+}
+if (b.value == " "){
+document.getElementById("e").style.display="inline-block";
+flag=0;
+}
+if (c.value == " "){
+document.getElementById("nu").style.display="inline-block";
+flag=0;
+}
+if (d.value == " "){
+document.getElementById("do").style.display="inline-block";
+flag=0;
+}
+if (e.value == ""){
+document.getElementById("ge").style.display="inline-block";
+flag=0;
+}
+if (f.value == " "||f.value.length<8){
+document.getElementById("pa").style.display="inline-block";
+flag=0;
+}
+if (h.value == " "||h.value ==f.value ){
+document.getElementById("co").style.display="inline-block";
+flag=0;
+}
+if(flag){
+        return true;
+                }
+                else{
+                    return false;
+                }
+
+
+</script>
+</html>
+

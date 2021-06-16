@@ -1,0 +1,197 @@
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Yinka Enoch Adedokun">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 
+	<title>Login Page</title>
+	<style>
+	   .navbar-custom { 
+            background-color:skyblue;
+            			
+        } 
+		
+.logo-img{
+    float: left;
+    position: relative;
+    margin: 10px 15px 15px 10px;
+}
+ .navbar {
+  width: 100%;
+  background-color:skyblue;
+  overflow: hidden;
+  height:0%
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  width: 16.66%; /* Four links of equal widths */
+  text-align: center;
+}
+
+.navbar a:hover {
+  background-color: #00CCFF;
+}
+
+.navbar a.active {
+  background-color: #00CCFF;
+}
+.main-content{
+	width: 50%;
+	border-radius: 20px;
+	box-shadow: 0 5px 5px rgba(0,0,0,.4);
+	margin: 5em auto;
+	display: flex;
+}
+.company__info{
+	background-color: #008080;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	display: flex;
+	
+	justify-content: center;
+	color: #fff;
+}
+.image1{
+border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+
+.fa-android{
+	font-size:3em;
+}
+@media screen and (max-width: 640px) {
+	.main-content{width: 90%;}
+	.company__info{
+		display: none;
+	}
+	.login_form{
+		border-top-left-radius:20px;
+		border-bottom-left-radius:20px;
+	}
+}
+@media screen and (min-width: 642px) and (max-width:800px){
+	.main-content{width: 70%;}
+}
+.row > h2{
+	color:#008080;
+}
+.login_form{
+	background-color: #fff;
+	border-top-right-radius:20px;
+	border-bottom-right-radius:20px;
+	border-top:1px solid #ccc;
+	border-right:1px solid #ccc;
+}
+form{
+	padding: 0 2em;
+}
+.form__input{
+	width: 100%;
+	border:0px solid transparent;
+	border-radius: 0;
+	border-bottom: 1px solid #aaa;
+	padding: 1em .5em .5em;
+	padding-left: 2em;
+	outline:none;
+	margin:1.5em auto;
+	transition: all .5s ease;
+}
+.form__input:focus{
+	border-bottom-color: #008080;
+	box-shadow: 0 0 5px rgba(0,80,80,.4); 
+	border-radius: 4px;
+}
+.btn{
+	transition: all .5s ease;
+	width: 70%;
+	border-radius: 30px;
+	color:#008080;
+	font-weight: 600;
+	background-color: #fff;
+	border: 1px solid #008080;
+	margin-top: 1.5em;
+	margin-bottom: 1em;
+}
+.btn:hover, .btn:focus{
+	background-color: #008080;
+	color:#fff;
+}
+	</style>
+</head>
+<body>
+<nav class="navbar navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar">
+       <img class="logo-img" src="logo.jpg" width="50" height="50" ALT="align box" ALIGN=CENTER>
+   
+    
+  <a href="Home.html">Home</a> 
+  <a href="DoctorLogin.html">Doctor</a> 
+  <a class="active"href="PatientLogin.html">Patient</a> 
+  <a href="About.html">About</a>
+  <a href="Help.html">Help</a>
+</div>
+  </div>
+</nav>
+	<!-- Main Content -->
+	<div class="container-fluid">
+		<div class="row main-content bg-success text-center">
+			<div class="col-md-4 text-center company__info">
+				<img class="image1" src="7.jpg" height='400' width='310'>
+				
+			</div>
+			<div class="col-md-8 col-xs-12 col-sm-12 login_form ">
+				<div class="container-fluid">
+					<div class="row">
+						<h2>Log In</h2>
+					</div>
+					<div class="row">
+						<form control="" class="form-group" name="myforms"  action="Patient_login_page.php" method="POST">
+							<div class="row">
+								<input type="text" name="umail" id="username" class="form__input" placeholder="Username">
+							</div>
+							<div class="row">
+								<!-- <span class="fa fa-lock"></span> -->
+								<input type="password" name="pwd" id="password" class="form__input" placeholder="Password">
+							</div>
+							<div class="row">
+								<input type="checkbox" name="remember_me" id="remember_me" class="">
+								<label for="remember_me">Remember Me!</label>
+							</div>
+							<div class="row">
+								<input type="submit" value="LOGIN" class="btn" onclick="login()">
+							</div>
+						</form>
+					</div>
+					<div class="row">
+						<p>Don't have an account? <a href="pat_reg.html">Register Here</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+<script type="text/javascript">
+function login () 
+{
+var em=document.forms["myforms"]["umail"].value;
+var p=document.forms["myforms"]["pwd"].value;
+var flag=1;
+if(em==""){ 
+window.alert("fill out email field");
+flag=0;
+ }
+if(p==""||p.length<=8){ 
+window.alert("fill out password field and min length is 8");
+flag=0;
+ }
+}
+</script>
