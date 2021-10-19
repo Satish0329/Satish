@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="https://miro.medium.com/max/1400/1*UNsIf1o8nP5e4YrTJOjvuQ.jpeg">
+	<title>Get Distances</title>
+	<style>
+		body {
+			font-family: verdana;
+		}
+	</style>
+	<script src="js/jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			$("#fetch").click(function() {
+
+				var lat1=$('#lat1').val();
+				var lng1=$('#lng1').val();
+				var lat2=$('#lat2').val();
+				var lng2=$("#lng2").val();
+
+				var url="https://dev.virtualearth.net/REST/v1/Routes/DistanceMatrix?origins="+lat1+","+lng1+"&destinations="+lat2+","+lng2+"&travelMode=driving&key=AkW_VcHhnQ2h7_vCU7CeSvNeOWG3Z6mDyEGAgazwHSRebxY1agfeOrWoIKk0a-V2";
+
+	// find name using lat and lng
+	//http://dev.virtualearth.net/REST/v1/Locations/17.3850,78.4867?&key=AkW_VcHhnQ2h7_vCU7CeSvNeOWG3Z6mDyEGAgazwHSRebxY1agfeOrWoIKk0a-V2
+			
+
+				$.ajax({
+					url:url,
+					type:"GET",
+					success:function(data) {
+						var distance=data["resourceSets"][0].resources[0].results[0].travelDistance;
+						console.log(distance);
+					}
+				});
+
+			});
+			
+		});
+	</script>
+</head>
+<body>
+	<h2>Get distance matrix</h2>
+	<div>
+		<table>
+			<tr>
+				<td><label>Source : </label></td>
+				<td><input type="text" name="lat1" id="lat1"></td>
+				<td><input type="text" name="lng1" id="lng1"></td>
+			</tr>
+		
+			<tr>
+				<td><label>Destination : </label></td>
+				<td><input type="text" name="lat2" id="lat2"></td>
+				<td><input type="text" name="lng2" id="lng2"></td>
+			</tr>
+			<tr>
+				<td style="text-align: center;" colspan="3">
+					<button id="fetch">Get distance</button>
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
